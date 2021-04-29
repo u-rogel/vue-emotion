@@ -1,0 +1,22 @@
+{
+  "name": "@u-rogel/vue-emotion",
+  "version": "1.0.0",
+  "description": "A css-in-js library to style your Vue applications with easier to maintain styles. Utilizing the emotion.js library.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css-in-js",
+    "vue-styled-components",
+    "vue-emotion",
+    "vue",
+    "styles",
+    "css"
+  ],
+  "author": "uria1rogel@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/css": "^11.1.3"
+  }
+}
