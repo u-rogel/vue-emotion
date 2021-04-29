@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "src",
+    "LICENSE"
+  ],
   "keywords": [
     "css-in-js",
     "vue-styled-components",
