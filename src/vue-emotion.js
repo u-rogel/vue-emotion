@@ -71,7 +71,11 @@ const styled = (styledComp) => {
     props: formerProps
   } = styledComp.extendOptions.styledComponent
   return (strings, ...tags) => {
-    return (props) => compGen(htmlTag, [...formerStyles, [strings, tags]], { ...formerProps, ...props})
+    return (props) => compGen(
+      htmlTag,
+      [...formerStyles, [strings, tags]],
+      { ...formerProps, ...props}
+    )
   }
 }
 
