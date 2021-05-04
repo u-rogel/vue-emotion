@@ -19,9 +19,9 @@ const compGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
           class: (() => {
             const theme = this.$veTheme
             const classes = stylesTemplates.map((stylesTemplate) => {
-              const [strings, tags = []] = stylesTemplate
+              const [strings, tags] = stylesTemplate
               let flatTags = []
-              if (tags.length) {
+              if (tags?.length) {
                 flatTags = tags.map((item) => {
                   if (typeof item === 'function') {
                     return item(this.$props, theme)

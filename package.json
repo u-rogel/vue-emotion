@@ -2,13 +2,14 @@
   "name": "@u-rogel/vue-emotion",
   "version": "1.0.1",
   "description": "A css-in-js library to style your Vue applications with easier to maintain styles. Utilizing the emotion.js library.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prepublish": "./node_modules/.bin/rollup --config ./rollup.config.js",
     "publish": "npm publish --access public",
     "test": "echo \"Warn: no test specified\""
   },
   "files": [
-    "src",
+    "dist",
     "LICENSE"
   ],
   "keywords": [
@@ -26,10 +27,14 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "eslint": "^7.25.0",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@rollup/plugin-babel": "^5.3.0",
     "babel-eslint": "^10.1.0",
+    "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "rollup": "^2.46.0"
   },
   "repository": {
     "type": "git",
