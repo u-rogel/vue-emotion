@@ -299,6 +299,10 @@ export default {
 
 This makes it much easier to look on a component in the DOM and to find the generating component file.
 
+## Sponsors
+
+<a href="https://website.m-anage.com/"><img src="https://nextcloud.m-events.com/index.php/apps/files_sharing/publicpreview/6TALHSZtqzTPink?x=3825&y=930&a=true&file=JMarquardt%2520Logo.jpg&scalingup=0" width="200px"></a>
+
 ## Road Map
 
 ### Finish support for Vue2:
