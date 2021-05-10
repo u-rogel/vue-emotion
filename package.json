@@ -1,6 +1,6 @@
 {
   "name": "@u-rogel/vue-emotion",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A css-in-js library to style your Vue applications with easier to maintain styles. Utilizing the emotion.js library.",
   "main": "dist/bundle.js",
   "scripts": {
