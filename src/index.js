@@ -1,4 +1,4 @@
-import styled from './vue-emotion'
+import styled from './styled'
 
 export {
   css,

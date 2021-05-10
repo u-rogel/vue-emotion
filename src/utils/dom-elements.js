@@ -111,7 +111,9 @@ export default [
   'ul',
   'var',
   'video',
-  'wbr', // SVG
+  'wbr',
+
+  // SVG
   'circle',
   'clipPath',
   'defs',
