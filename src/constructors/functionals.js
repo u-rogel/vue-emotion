@@ -9,12 +9,10 @@ export const funcGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
       className: String,
       ...props,
     },
-    inject: ['veScopedTheme'],
     render(createElement, context) {
       const {
         parent,
         children,
-        injections,
         data,
       } = context
       return createElement(
@@ -22,7 +20,7 @@ export const funcGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
         {
           ...data,
           class: (() => {
-            const theme = { ...parent.$veTheme, ...injections.veScopedTheme }
+            const theme = parent.$veTheme
             const resolvedClasses = classResolver({
               theme,
               stylesTemplates,

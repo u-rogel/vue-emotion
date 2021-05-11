@@ -307,7 +307,6 @@ This makes it much easier to look on a component in the DOM and to find the gene
 
 ### Finish support for Vue2:
 1. Scoped Theme (Usability)
-2. Convert Components to functional (Performance)
 
 ### Support for Vue3:
 1. Install-able (Usability)
