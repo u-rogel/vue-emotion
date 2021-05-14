@@ -1,19 +1,20 @@
 import Vue from 'vue'
 import { classResolver } from '../utils/class-resolver'
 
-export const funcGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
+export const funcGen = (htmlTag, stylesTemplates, propTypes = {}) => Vue.component(
   'StyledComponent',
   {
     functional: true,
     props: {
       className: String,
-      ...props,
+      ...propTypes,
     },
     render(createElement, context) {
       const {
         parent,
         children,
         data,
+        props,
       } = context
       return createElement(
         htmlTag,
@@ -44,7 +45,7 @@ export const funcGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
       functional: true,
       stylesTemplates,
       htmlTag,
-      props,
+      propTypes,
     },
   },
 )
@@ -52,8 +53,8 @@ export const funcGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
 export const styledFunc = (
   htmlTag,
   stylesTemplate,
-) => (props) => funcGen(
+) => (propTypes) => funcGen(
   htmlTag,
   [stylesTemplate],
-  props,
+  propTypes,
 )

@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import { classResolver } from '../utils/class-resolver'
 
-export const compGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
+export const compGen = (htmlTag, stylesTemplates, propTypes = {}) => Vue.component(
   'StyledComponent',
   {
     props: {
       className: String,
       value: [String, Number, Date, Boolean],
-      ...props,
+      ...propTypes,
     },
     computed: {
       localValue: {
@@ -44,7 +44,7 @@ export const compGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
     styledComponent: {
       stylesTemplates,
       htmlTag,
-      props,
+      propTypes,
     },
   },
 )
@@ -52,8 +52,8 @@ export const compGen = (htmlTag, stylesTemplates, props = {}) => Vue.component(
 export const styledComp = (
   htmlTag,
   stylesTemplate,
-) => (props) => compGen(
+) => (propTypes) => compGen(
   htmlTag,
   [stylesTemplate],
-  props,
+  propTypes,
 )

@@ -7,20 +7,20 @@ const styled = (styledInstance) => {
   const {
     htmlTag,
     stylesTemplates: formerStyles,
-    props: formerProps,
+    propTypes: formerPropTypes,
     functional,
   } = styledInstance.extendOptions.styledComponent
   if (functional) {
-    return (strings, ...tags) => (props) => funcGen(
+    return (strings, ...tags) => (propTypes) => funcGen(
       htmlTag,
       [...formerStyles, [strings, tags]],
-      { ...formerProps, ...props },
+      { ...formerPropTypes, ...propTypes },
     )
   }
-  return (strings, ...tags) => (props) => compGen(
+  return (strings, ...tags) => (propTypes) => compGen(
     htmlTag,
     [...formerStyles, [strings, tags]],
-    { ...formerProps, ...props },
+    { ...formerPropTypes, ...propTypes },
   )
 }
 
