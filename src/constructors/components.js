@@ -25,7 +25,7 @@ export const compGen = (htmlTag, stylesTemplates, propTypes = {}) => Vue.compone
               theme,
               stylesTemplates,
               props: this.$props,
-              staticClass: this.$vnode.data,
+              staticClass: this.$vnode.data.staticClass,
             })
             this.$vnode.data.staticClass = ''
             return resolvedClasses
